@@ -1,0 +1,29 @@
+<p>array-example works!</p>
+
+ <table class="table">
+     <tr>
+        <th>Name</th>
+        <th>Age</th>
+     </tr>
+     <tr>
+         <td>{{namearray[0].Name}}</td>
+         <td>{{namearray[0].Age}}</td>
+     </tr>
+     <tr>
+        <td>{{namearray[1].Name}}</td>
+        <td>{{namearray[1].Age}}</td>
+    </tr>
+ </table>
+ <!--------------another way to disay array------------->
+ 
+ <table class="table">
+    <tr>
+       <th>Name</th>
+       <th>Age</th>
+    </tr>
+    <tr *ngFor="let info of namearray">
+
+        <td>{{info.Name}}</td>
+        <td>{{info.Age}}</td>
+    </tr>
+</table>
