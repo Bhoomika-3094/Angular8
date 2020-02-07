@@ -1,1 +1,38 @@
 <p>modelexample works!</p>
+<div class="card">
+    <div class="card-header">
+        <h1>Student info</h1>
+    </div>
+    <div class="card-body">
+        <div class="serach-part">
+            <div class="row">
+                <div class="col-8"><input type="text" class="form form-control" placeholder="Search student info" [(ngModel)]="searchname"></div>
+                <div class="col-2"><button class="btn btn-success" (click)="onClick()">Search</button></div>
+            </div>
+            <div class="rows">
+                <div class="col-12">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Roll No</th>
+                            <th>Student Name</th>
+                        </tr>
+                        <tr >
+                            <td></td>
+                            <td>{{gotname}}</td>    
+                        </tr> 
+                    </table>
+                </div>
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <tr>
+                <th>Roll No</th>
+                <th>Student Name</th>
+            </tr>
+            <tr *ngFor="let Studentinfo of students">
+                <td>{{Studentinfo.rollNo}}</td>
+                <td>{{Studentinfo.studentName}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
